@@ -1,0 +1,5 @@
+Link to analyze: 'https://basis.uni-bonn.de/qisserver/rds;jsessionid=627B1CCB1D9C3F205EE047E7D1FB66F0?state=wtree&search=1&trex=step&root120161=130415|140415&P.vx=lang'
+Time needed: 20.661sec
+Global Nodes: 4
+Global Leaves:19
+Global Lectures:264
