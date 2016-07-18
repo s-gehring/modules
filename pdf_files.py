@@ -17,7 +17,7 @@ def split_pdf_into_pages(pdf_filepath, pdf_outpaths="./download/splitted_pdf_%s.
         cur_page = inputpdf.getPage(i)
         texts.append(cur_page.extractText())
         outputpdf.addPage(cur_page)
-        with open(pdf_outpaths % i, "wb") as outputStream:
+        with open(pdf_outpaths % str(i).zfill(3), "wb") as outputStream:
             outputpdf.write(outputStream)
     return texts
 
