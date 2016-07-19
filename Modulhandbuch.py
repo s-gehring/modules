@@ -25,9 +25,11 @@ def get_url_tidy_text(url):
       "indent":0,
       "tidy-mark":0,
       "wrap":0,
-      #"input-encoding":"utf8",
+      "char-encoding":"raw",
       "doctype":"transitional",
-      "preserve-entities":True
+      "preserve-entities":True,
+      "quiet":True,
+      "tidy-mark":False
     })[0]
 
     return x
