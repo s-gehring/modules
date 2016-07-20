@@ -8,7 +8,7 @@ global_nodes = 0
 global_lectures=0
 
 
-def get_tree(link, deep_search=False, first_iteration=False):
+def get_tree(link, deep_search=False, first_iteration=True):
     global global_leaves, global_nodes
     c = network.get_content(link)
     #print c.prettify()
@@ -37,7 +37,7 @@ def get_tree(link, deep_search=False, first_iteration=False):
             if first_iteration:
               print round(i*100./len(new_links),2),"% ("+l+")"
               i=i+1
-            arr.update({l:get_tree(get_hyper_reference(new_links[l]), deep_search)})
+            arr.update({l:get_tree(get_hyper_reference(new_links[l]), deep_search, False)})
         return arr
 
 def get_link_padding(link_container):

@@ -13,7 +13,7 @@ import pdf_files as pdf
 import time
 import os
 from tidylib import tidy_document
-from bs4 import BeautifulSoup as bs
+
 import tree
 import io
 
@@ -38,7 +38,7 @@ pdf.handle_handbook(links['modules']['BSc'], "Bachelor")
 url = links['basis']['cs']
 
 start = time.time()
-s = tree.get_tree(url, False, True)
+s = tree.get_tree(url, deep_search=False) # Deep-Search: Look for dedicated pages instead of just tables for lectures.
 end = time.time()
 
 if not os.path.exists('./output/'):
